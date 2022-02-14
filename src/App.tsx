@@ -6,8 +6,8 @@ const App: React.VFC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <ColoredMessage color="red" fontSize={50} />
-        <ColoredMessage color="blue" message="Dog Puzzule!" fontSize={28} />
+        <ColoredMessage color="red" fontSize={50}>チルドレン渡し</ColoredMessage>
+        <ColoredMessage color="Yellow" fontSize={28} />
       </header>
     </div>
   );
