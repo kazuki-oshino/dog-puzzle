@@ -7,13 +7,13 @@ type ColoredMessageProps = {
 };
 
 export const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize, children }) => {
-    const [num, setNum] = useState(0);
+    const [scaleFontSize, setScaleFontSize] = useState(fontSize);
     const onClickCountButton = () => {
-        setNum((prev) => prev + 1);
+        setScaleFontSize((prev) => prev + 1);
     };
     const coloredStyle = {
         color,
-        fontSize: fontSize + "px",
+        fontSize: scaleFontSize + "px",
     };
     // useEffect(() => {
     //     alert(`useEffect:${color}`);
@@ -22,7 +22,7 @@ export const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize
     return (
         <>
             <button onClick={onClickCountButton}>ボタン</button>
-            <p>{num}</p>
+            <p style={coloredStyle}>{scaleFontSize}</p>
         </>
     );
 }
