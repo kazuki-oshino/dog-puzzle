@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import ColoredMessage from "./components/ColoredMessage";
+import { ColoredMessage } from "./components/ColoredMessage";
 
-const App: React.VFC = () => {
+export const App: React.VFC = () => {
   const [num, setNum] = useState(0);
   const onClickCountButton = () => {
     setNum((prev) => prev + 1);
@@ -20,5 +20,3 @@ const App: React.VFC = () => {
     </div>
   );
 }
-
-export default App;

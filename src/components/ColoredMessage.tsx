@@ -6,7 +6,7 @@ type ColoredMessageProps = {
     children?: ReactNode
 };
 
-const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize, children }) => {
+export const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize, children }) => {
     const [num, setNum] = useState(0);
     const onClickCountButton = () => {
         setNum((prev) => prev + 1);
@@ -26,5 +26,3 @@ const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize, child
         </>
     );
 }
-
-export default ColoredMessage;
