@@ -5,7 +5,7 @@ export const CssModules: React.VFC = () => {
   return (
     <div className={classes.container}>
       <p className={classes.title}>css modules</p>
-      <button className={classes.button}>ボタンやでー</button>
+      <button className={classes.button}>ボタン</button>
     </div>
   );
 };
