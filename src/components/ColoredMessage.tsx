@@ -20,7 +20,7 @@ export const ColoredMessage: React.VFC<ColoredMessageProps> = ({
     fontSize: scaleFontSize + "px",
   };
   // useEffect(() => {
-  //     alert(`useEffect:${color}`);
+  //   alert(`useEffect:${color}`);
   // }, [num]);
   console.log(`colored message レンダリング ${color}`);
   return (
