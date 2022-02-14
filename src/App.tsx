@@ -7,8 +7,6 @@ export const App: React.VFC = () => {
   const onClickCountButton = () => {
     setNum((prev) => prev + 1);
   };
-  console.log("レンダリング");
-
   return (
     <div className="App">
       <header className="App-header">
