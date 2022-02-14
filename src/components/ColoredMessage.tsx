@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 
 type ColoredMessageProps = {
     color: string
@@ -15,6 +15,9 @@ const ColoredMessage: React.VFC<ColoredMessageProps> = ({ color, fontSize, child
         color,
         fontSize: fontSize + "px",
     };
+    // useEffect(() => {
+    //     alert(`useEffect:${color}`);
+    // }, [num]);
     console.log(`colored message レンダリング ${color}`);
     return (
         <>
