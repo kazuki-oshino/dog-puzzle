@@ -1,16 +1,12 @@
 import React from "react";
 import { AppHeader } from "./AppHeader";
-import { Buttons } from "./Buttons";
-import { Puzzle } from "./Puzzle";
-import { Scores } from "./Scores";
+import { Contents } from "./Contents";
 
 export const Home: React.VFC = () => {
   return (
     <div>
       <AppHeader></AppHeader>
-      <Scores></Scores>
-      <Puzzle></Puzzle>
-      <Buttons></Buttons>
+      <Contents></Contents>
     </div>
   );
 };
