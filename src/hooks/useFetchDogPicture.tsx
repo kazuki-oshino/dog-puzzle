@@ -24,7 +24,6 @@ export const useFetchDogPicture = () => {
       })
       .finally(() => {
         setIsLoading(false);
-        console.log(data?.url);
       });
   };
 

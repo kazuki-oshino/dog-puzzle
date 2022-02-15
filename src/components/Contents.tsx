@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFetchDogPicture } from "../hooks/useFetchDogPicture";
 import { Buttons } from "./Buttons";
 import { Puzzle } from "./Puzzle";
@@ -13,10 +13,14 @@ export const Contents: React.VFC = () => {
   const onClickStart = () => {
     alert("start");
   };
+  useEffect(() => {
+    onClickFetchDogPicture();
+  }, []);
+
   return (
     <>
       <Scores></Scores>
-      <Puzzle></Puzzle>
+      <Puzzle url={data?.url}></Puzzle>
       <Buttons
         onClickChange={onClickFetchDogPicture}
         onClickReset={onClickReset}
