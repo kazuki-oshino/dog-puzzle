@@ -1,30 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useFetchDogPicture } from "../hooks/useFetchDogPicture";
 import { Buttons } from "./Buttons";
 import { Puzzle } from "./Puzzle";
 import { Scores } from "./Scores";
 
 export const Contents: React.VFC = () => {
-  const { data, isLoading, isError, onClickFetchDogPicture } =
+  const { data, isLoading, isError, onClickFetchDogOrFoxPicture } =
     useFetchDogPicture();
-  const onClickReset = () => {
-    alert("reset");
-  };
-  const onClickStart = () => {
-    alert("start");
-  };
+  const [score, setScore] = useState(0);
+  const onClickCorrect = useCallback(
+    (chooseDog: boolean) => {
+      if ((data?.isDog && chooseDog) || (!data?.isDog && !chooseDog)) {
+        setScore((prev) => prev + 1);
+      }
+    },
+    [data]
+  );
+
   useEffect(() => {
-    onClickFetchDogPicture();
+    onClickFetchDogOrFoxPicture();
   }, []);
 
   return (
     <>
-      <Scores></Scores>
+      <Scores score={score}></Scores>
       <Puzzle url={data?.url}></Puzzle>
       <Buttons
-        onClickChange={onClickFetchDogPicture}
-        onClickReset={onClickReset}
-        onClickStart={onClickStart}
+        onClickFetchPic={onClickFetchDogOrFoxPicture}
+        onClickCorrect={onClickCorrect}
+        isLoading={isLoading}
       ></Buttons>
     </>
   );

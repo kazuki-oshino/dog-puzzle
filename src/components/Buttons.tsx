@@ -1,24 +1,35 @@
 import React from "react";
-import { useFetchDogPicture } from "../hooks/useFetchDogPicture";
 import { AppButton } from "./AppButton";
 
 type Props = {
-  onClickChange: () => void;
-  onClickReset: () => void;
-  onClickStart: () => void;
+  onClickFetchPic: () => void;
+  onClickCorrect: (chooseDog: boolean) => void;
+  isLoading: boolean;
 };
 
 export const Buttons: React.VFC<Props> = ({
-  onClickChange,
-  onClickReset,
-  onClickStart,
+  onClickFetchPic,
+  onClickCorrect,
+  isLoading,
 }) => {
   return (
     <>
-      <div className="container mx-auto px-24 flex justify-around m-2">
-        <AppButton text="Change" onClickButton={onClickChange}></AppButton>
-        <AppButton text="Reset" onClickButton={onClickReset}></AppButton>
-        <AppButton text="Start" onClickButton={onClickStart}></AppButton>
+      <div className="container mx-auto px-40 flex justify-around m-4">
+        <AppButton
+          text="Dog"
+          onClickButton={onClickFetchPic}
+          onClickCorrectButton={onClickCorrect}
+          isLoading={isLoading}
+        ></AppButton>
+        <p className="text-gray-200 text-xl text-center font-bold">
+          Dog or Fox?
+        </p>
+        <AppButton
+          text="Fox"
+          onClickButton={onClickFetchPic}
+          onClickCorrectButton={onClickCorrect}
+          isLoading={isLoading}
+        ></AppButton>
       </div>
     </>
   );

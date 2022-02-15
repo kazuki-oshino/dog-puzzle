@@ -1,4 +1,5 @@
 import React, { VFC } from "react";
+import Resizer from "react-image-file-resizer";
 
 type Props = {
   url?: string;
@@ -7,8 +8,13 @@ type Props = {
 export const Puzzle: React.VFC<Props> = ({ url }) => {
   return (
     <div className="container mx-auto px-24">
-      <p className="border bg-gray-200">Puzzleやでー</p>
-      <img src={url} alt="" width={300} height={300} />
+      <img
+        className="container mx-auto px-24"
+        src={url}
+        alt="dog puzzle"
+        width={300}
+        height={300}
+      />
     </div>
   );
 };
