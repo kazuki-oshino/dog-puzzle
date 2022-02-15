@@ -1,5 +1,6 @@
 import React from "react";
 import { AppHeader } from "./AppHeader";
+import { Puzzle } from "./Puzzle";
 import { Scores } from "./Scores";
 
 export const Home: React.VFC = () => {
@@ -7,6 +8,7 @@ export const Home: React.VFC = () => {
     <div>
       <AppHeader></AppHeader>
       <Scores></Scores>
+      <Puzzle></Puzzle>
     </div>
   );
 };
