@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { TailwindCss } from "./components/TailwindCss";
+import { Home } from "./components/Home";
 
 export const App: React.VFC = () => {
   return (
     <>
-      <TailwindCss></TailwindCss>
+      <Home />
     </>
   );
 };
