@@ -14,7 +14,7 @@ export const Buttons: React.VFC<Props> = ({
 }) => {
   return (
     <>
-      <div className="container mx-auto px-40 flex justify-around m-4">
+      <div className="container mx-auto px-96 flex justify-around m-4">
         <AppButton
           text="Dog"
           onClickButton={onClickFetchPic}
