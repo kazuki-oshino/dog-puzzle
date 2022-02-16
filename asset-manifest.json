@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dog-puzzle/static/css/main.6c356774.css",
-    "main.js": "/dog-puzzle/static/js/main.f1ecf801.js",
+    "main.css": "/dog-puzzle/static/css/main.63a7c4f4.css",
+    "main.js": "/dog-puzzle/static/js/main.c2530bea.js",
     "static/js/787.3cf3b499.chunk.js": "/dog-puzzle/static/js/787.3cf3b499.chunk.js",
     "index.html": "/dog-puzzle/index.html",
-    "main.6c356774.css.map": "/dog-puzzle/static/css/main.6c356774.css.map",
-    "main.f1ecf801.js.map": "/dog-puzzle/static/js/main.f1ecf801.js.map",
+    "main.63a7c4f4.css.map": "/dog-puzzle/static/css/main.63a7c4f4.css.map",
+    "main.c2530bea.js.map": "/dog-puzzle/static/js/main.c2530bea.js.map",
     "787.3cf3b499.chunk.js.map": "/dog-puzzle/static/js/787.3cf3b499.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c356774.css",
-    "static/js/main.f1ecf801.js"
+    "static/css/main.63a7c4f4.css",
+    "static/js/main.c2530bea.js"
   ]
 }
